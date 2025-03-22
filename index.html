@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoicegen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Dynamic Table Form Invoice (laravel) </h1>
+    </header>
+    <main>
+        <form>
+            <header>
+                <div class="company">
+                    <div class="name"><strong> KL Tech</strong></div>
+                    <div class="address">
+
+                        Ramathpur Seamari Bazar
+                        Mahmoodpur, Sultanpur,<br> Uttar Pradesh,
+                        India-228142<br>Email: kltech11@gmail.com<br>Phone: +91 7755027538
+                    </div>
+                </div>
+                <h2>invoice</h2>
+            </header>
+            <div class="customer">
+                <div class="info">
+                    <div class="bill-to"><strong>bill-to</strong></div>
+                    <div>
+                        Google India Pvt.</br>
+                        Sultanpur, India - 226022</br>GSTIN: 29AABCG0527K1Z2<br>PAN: AABCG0527K
+                    </div>
+                </div>
+                <div class="invoice">
+                    <table>
+                        <tr>
+                            <th>Customer ID :</th>
+                            <td>GOOGLE-IND-123456</td>
+                        </tr>
+                        <tr>
+                            <th>Invoice :</th>
+                            <td>KLTECH-2025-001</td>
+                        </tr>
+                        <tr>
+                            <th>Date :</th>
+                            <td> 31/03/2025 </td>
+                        </tr>
+                        <tr>
+                            <th>Terms :</th>
+                            <td>Net 30</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="management-form">
+                <input type="hidden" name="invoice-TOTAL_FORMS" value="1" id="id_invoice-TOTAL_FORMS">
+                <input type="hidden" name="invoice-INITIAL_FORMS" value="1" id="id_invoice-INITIAL_FORMS">
+                <input type="hidden" name="invoice-MIN_NUM_FORMS" value="1" id="id_invoice-MIN_NUM_FORMS">
+                <input type="hidden" name="invoice-MAX_NUM_FORMS" value="10" id="id_invoice-MAX_NUM_FORMS">
+            </div>
+            <table>
+                <thead>
+
+
+                    <tr>
+                        <th>Select Your country</th>
+                        <th>Select Your state</th>
+                        <th>Select Your Cite</th>
+                        <td>
+                            <button type="button" class="clone" onclick="AddRows()">Add item</button>
+                        </td>
+                    </tr>
+                <tbody id="tablecontainer">
+                </tbody>
+               
+                </thead>
+            </table>
+        </form>
+
+    </main>
+</body>
+
+
+</html>
